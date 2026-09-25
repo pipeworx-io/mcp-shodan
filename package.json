@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-shodan",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shodan MCP — wraps the full Shodan REST API (api.shodan.io)",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-shodan": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "shodan"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-shodan"
+    "url": "git+https://github.com/pipeworx-io/mcp-shodan.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-a718ba5062a1de3b8a458a0646f56a531bed06ea683c3c6c5e98476f5c86c3e7",
+    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
   }
 }
