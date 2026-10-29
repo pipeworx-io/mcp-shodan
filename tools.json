@@ -1,0 +1,77 @@
+[
+  {
+    "name": "shodan_host",
+    "description": "What's exposed on IP <ip> — open ports, services, and CVEs. Returns the full Shodan host profile: ports, hostnames, org/ISP, geolocation, OS, known vulnerabilities, and a per-service banner sample. Example: shodan_host({ ip: \"8.8.8.8\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ip": {
+          "type": "string",
+          "description": "IPv4 address to look up, e.g. \"8.8.8.8\""
+        },
+        "history": {
+          "type": "boolean",
+          "description": "Include historical banners (optional, default false)"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Shodan API key (account.shodan.io; paid membership required)"
+        }
+      },
+      "required": [
+        "ip",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "shodan_host_search",
+    "description": "Search Shodan for hosts matching <query> using Shodan search syntax (e.g. \"apache country:US\", \"port:22 org:\\\"Google\\\"\"). Returns matching hosts with IP, port, org, hostnames, product, and location. Example: shodan_host_search({ query: \"apache country:US\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Shodan search query. Supports filters like country:, org:, port:, product:, os:, e.g. \"apache country:US\""
+        },
+        "page": {
+          "type": "integer",
+          "description": "Result page number (optional, 100 results/page, default 1)"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Shodan API key (account.shodan.io; paid membership required)"
+        }
+      },
+      "required": [
+        "query",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "shodan_host_count",
+    "description": "Count hosts matching <query> with facet breakdown (free — this endpoint does not consume query credits). Returns the total match count plus optional facet aggregations (e.g. top countries, orgs, ports). Example: shodan_host_count({ query: \"apache\", facets: \"country:10\", _apiKey: \"your-key\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Shodan search query, e.g. \"apache\" or \"port:443 country:DE\""
+        },
+        "facets": {
+          "type": "string",
+          "description": "Comma-separated facets for aggregation, e.g. \"country:10\" or \"org:5,port:5\" (optional)"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Shodan API key (account.shodan.io; paid membership required)"
+        }
+      },
+      "required": [
+        "query",
+        "_apiKey"
+      ]
+    }
+  }
+]
