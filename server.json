@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/shodan",
-  "title": "Shodan",
-  "description": "Shodan MCP — wraps the full Shodan REST API (api.shodan.io)",
-  "version": "0.2.1",
+  "title": "Shodan (Unofficial)",
+  "description": "Unofficial Shodan MCP — wraps the full Shodan REST API (api.shodan.io)",
+  "version": "0.2.2",
   "websiteUrl": "https://pipeworx.io/packs/shodan",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-shodan",

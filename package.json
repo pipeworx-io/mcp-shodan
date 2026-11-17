@@ -1,7 +1,7 @@
 {
   "name": "@pipeworx/mcp-shodan",
-  "version": "0.2.1",
-  "description": "Shodan MCP — wraps the full Shodan REST API (api.shodan.io)",
+  "version": "0.2.2",
+  "description": "Unofficial Shodan MCP — wraps the full Shodan REST API (api.shodan.io)",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "shodan",
     "gatewaySlug": "shodan",
-    "sourceHash": "v1-5131d1006b2ab5803202d33130254bcaec29fa5c9756c65b389a5082d74095a7",
-    "sourceCommit": "8fc802aa5e23be625ce08d97178f5676c7bc93f3"
+    "sourceHash": "v1-6a8ec6d067698d9a49795f2d54baa14b4024fa5030b545facbdc37f8742685df",
+    "sourceCommit": "6e7ae693219a515a7ee6dd88d02390ab290fbad3"
   }
 }
